@@ -28,10 +28,9 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(__unused UIApplication *)application
-didFinishLaunchingWithOptions:(__unused NSDictionary *)launchOptions
+- (BOOL)application:(__unused UIApplication *)application didFinishLaunchingWithOptions:(__unused NSDictionary *)launchOptions
 {
-    [[Antenna sharedLogger] addChannelWithURL:[NSURL URLWithString:@"http://localhost:5000"] method:@"LOG"];
+    [[Antenna sharedLogger] addChannelWithURL:[NSURL URLWithString:@"http://binira.com/Logger/log.php"] method:@"POST"];
     [[Antenna sharedLogger] startLoggingApplicationLifecycleNotifications];
     [[Antenna sharedLogger] startLoggingNotificationName:AntennaExampleNotification];
 
